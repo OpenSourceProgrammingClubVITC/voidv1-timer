@@ -31,8 +31,11 @@ export default function HeroSection() {
 
       {/* Hero content */}
       <motion.div 
-        className="relative z-20 text-center px-4 sm:px-6 mt-[clamp(18vh,24vh,32vh)] sm:mt-[20vh] w-full max-w-[90vw] sm:max-w-[80vw] mx-auto" 
-        style={{ scale: inverseScale }}
+        className="relative z-20 text-center px-4 sm:px-6 mt-0 sm:mt-[20vh] w-full max-w-[90vw] sm:max-w-[80vw] mx-auto" 
+        style={{ 
+          scale: inverseScale,
+          marginTop: "clamp(18vh, calc(env(safe-area-inset-top, 0px) + 20vh), 32vh)"
+        }}
       >
         <h2 className="text-xs sm:text-sm tracking-[0.2em] uppercase text-white/70 font-mono mb-2 sm:mb-4">Embrace the unknown</h2>
         <div className="flex justify-center mt-2 sm:mt-4 md:mt-8">
@@ -41,7 +44,7 @@ export default function HeroSection() {
             alt="VOID"
             width={520}
             height={160}
-            className="w-[220px] sm:w-[320px] md:w-[440px] lg:w-[520px] max-w-[85vw] h-auto"
+            className="w-[220px] sm:w-[320px] md:w-[440px] lg:w-[520px] max-w-[92vw] h-auto object-contain"
             priority
           />
         </div>

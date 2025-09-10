@@ -101,7 +101,7 @@ export default function Partners() {
 
         {/* Partners Feature Card for GDG */}
         <div className="max-w-3xl mx-auto mb-16">
-          <div className="void-card p-6 md:p-8">
+          <div className="rounded-2xl p-6 md:p-8 liquid-container">
             <div className="flex flex-col md:flex-row items-center gap-6">
               <div className="w-24 h-24 rounded-xl overflow-hidden relative flex-shrink-0">
                 <Image
