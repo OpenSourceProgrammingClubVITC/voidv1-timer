@@ -11,10 +11,10 @@ const QA = [
     q: "What should I bring?",
     a: "Laptop, chargers, valid ID, and your creative energy. We'll take care of food and space.",
   },
-  {
-    q: "Do I need a team beforehand?",
-    a: "No. You can join solo and form a team on‑site during the kickoff mingle.",
-  },
+  // {
+  //   q: "Do I need a team beforehand?",
+  //   a: "No. You can join solo and form a team on‑site during the kickoff mingle.",
+  // },
   {
     q: "What are the judging criteria?",
     a: "Impact, technical depth, design craft, and innovation. Live demos only — no slide decks.",

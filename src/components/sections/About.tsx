@@ -20,7 +20,7 @@
 
       const stats = [
         { k: "Duration", v: "24 Hours", color: "from-purple-500 to-pink-500", glow: "#8B5CF6" },
-        { k: "Team Size", v: "1 – 4", color: "from-blue-500 to-cyan-500", glow: "#3B82F6" },
+        { k: "Team Size", v: "4 - 6", color: "from-blue-500 to-cyan-500", glow: "#3B82F6" },
         { k: "Format", v: "In‑person", color: "from-emerald-500 to-teal-500", glow: "#10B981" },
         { k: "Open to", v: "Everyone", color: "from-orange-500 to-red-500", glow: "#F97316" },
         { k: "Judging", v: "Live demo", color: "from-violet-500 to-purple-500", glow: "#7C3AED" },

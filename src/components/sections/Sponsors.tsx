@@ -27,10 +27,10 @@ export default function Sponsors() {
           <span className="bg-gradient-to-r from-white via-purple-200 via-cyan-200 to-white bg-clip-text text-transparent">Sponsorship</span>
           <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-purple-500 via-pink-500 to-emerald-500 rounded-full opacity-80"></span>
         </h2>
-        <p className="text-white/80 mt-4">Choose a tier that matches your goals – each with premium liquid-glass cards.</p>
+        {/* <p className="text-white/80 mt-4">Choose a tier that matches your goals – each with premium liquid-glass cards.</p> */}
       </div>
 
-      <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+      {/* <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
         {tiers.map((t) => (
           <div key={t.name} className="group">
             <div className="rounded-2xl p-6 liquid-container transition-all duration-500 hover:scale-105">
@@ -49,7 +49,16 @@ export default function Sponsors() {
             </div>
           </div>
         ))}
-      </div>
+      </div> */}
+      <div className="flex flex-col items-center justify-center w-full h-full">
+      <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white via-purple-300 to-white mb-3">
+        COMING SOON  .   .   .
+      </h1>
+      {/* <div className="h-px w-40 bg-gradient-to-r from-transparent via-purple-500/60 to-transparent"></div> */}
+      {/* <p className="text-white/70 mt-3 text-xs sm:text-sm tracking-[0.1em] uppercase font-mono">
+        Under Construction
+      </p> */}
+    </div>
     </section>
   );
 }

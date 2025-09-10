@@ -133,8 +133,8 @@ export default function JudgesSection() {
   //   return styles;
   // };
   return (
-    <section id="judges" className="min-h-screen py-10 text-white relative overflow-hidden bg-black">
-      <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <section id="judges" className="py-10 text-white relative overflow-hidden">
+      {/* <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 relative z-10"> */}
         <motion.div 
           className="mb-20 md:mb-24 text-center"
           initial={{ opacity: 0, y: 20 }}
@@ -161,7 +161,7 @@ export default function JudgesSection() {
         Under Construction
       </p> */}
     </div>
-  </div>
+  {/* </div> */}
   </section>
 )}
 
