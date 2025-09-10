@@ -30,7 +30,7 @@ const DATA: Track[] = [
     ],
     badges: ["UPI Integration", "Secure", "Scalable"],
     background:
-      "url('https://images.unsplash.com/photo-1553729459-efe14ef6055d?q=80&w=2070&auto=format&fit=crop')",
+      "/fintech.jpg",
   },
   {
     id: "health-ed",
@@ -46,7 +46,7 @@ const DATA: Track[] = [
     ],
     badges: ["AI-Powered", "Privacy-First", "Accessible"],
     background:
-      "url('https://images.unsplash.com/photo-1581056771107-24ca5f033842?q=80&w=2070&auto=format&fit=crop')",
+      "/medtech.jpg",
   },
   {
     id: "retail-saas-mobility",
@@ -62,7 +62,7 @@ const DATA: Track[] = [
     ],
     badges: ["IoT-Ready", "Real-time", "Mobile-First"],
     background:
-      "url('https://images.unsplash.com/photo-1551446591-142875a901a1?q=80&w=2070&auto=format&fit=crop')",
+      "/retail.jpeg",
   },
   {
     id: "agri-sdg",
@@ -78,7 +78,7 @@ const DATA: Track[] = [
     ],
     badges: ["Sustainable", "Data-Driven", "Impact"],
     background:
-      "url('https://images.unsplash.com/photo-1560785496-3c9d27877182?q=80&w=2070&auto=format&fit=crop')",
+      "/agri.jpg",
   },
   {
     id: "open",
@@ -169,7 +169,7 @@ export default function Tracks() {
               <div
                 key={t.id}
                 className={slideClass}
-                style={{ backgroundImage: t.background }}
+                style={{ backgroundImage: t.background.startsWith("url(") ? t.background : `url('${t.background}')` }}
                 onMouseEnter={() => !isMobile && setActiveSlide(i)}
                 onClick={() => setActiveSlide(i)}
                 role="button"
