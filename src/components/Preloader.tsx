@@ -38,11 +38,22 @@ export default function Preloader() {
     };
   }, []);
 
+  // Prevent background scroll and ensure loader overlays everything
+  useEffect(() => {
+    if (loading) {
+      const previousOverflow = document.body.style.overflow;
+      document.body.style.overflow = "hidden";
+      return () => {
+        document.body.style.overflow = previousOverflow;
+      };
+    }
+  }, [loading]);
+
   if (!loading) return null;
 
   return (
     <div 
-      className="fixed inset-0 bg-black z-50 flex flex-col items-center justify-center"
+      className="fixed inset-0 bg-black z-[9999] flex flex-col items-center justify-center"
       style={{ 
         transition: "opacity 0.5s ease-in-out",
         opacity: progress === 100 ? 0 : 1
