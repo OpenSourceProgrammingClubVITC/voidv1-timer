@@ -5,7 +5,7 @@ import React, { useState } from "react";
 const QA = [
   {
     q: "Who can participate?",
-    a: "Anyone who loves to build — students, professionals, beginners. Teams of 1–4 are welcome.",
+    a: "Anyone who loves to build — students, professionals, beginners. Teams of 4-6 are welcome.",
   },
   {
     q: "What should I bring?",
