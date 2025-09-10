@@ -103,13 +103,13 @@ export default function Partners() {
         <div className="max-w-3xl mx-auto mb-16">
           <div className="rounded-2xl p-6 md:p-8 liquid-container">
             <div className="flex flex-col md:flex-row items-center gap-6">
-              <div className="w-24 h-24 rounded-xl overflow-hidden relative flex-shrink-0">
+              <div className="relative w-full md:w-56 aspect-[4/3] rounded-xl overflow-hidden flex-shrink-0">
                 <Image
-                  src="/gemini.jpg" // Replace with your GDG logo, e.g. /partners/gdg.png
+                  src="/gemini.jpg" // Replace with your GDG image, e.g. /partners/gdg.jpg
                   alt="GDG logo"
                   fill
-                  sizes="96px"
-                  className="object-contain p-2"
+                  sizes="(max-width: 768px) 100vw, 224px"
+                  className="object-cover"
                   priority
                 />
               </div>
