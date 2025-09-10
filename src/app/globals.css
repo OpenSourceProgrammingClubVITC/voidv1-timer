@@ -1,0 +1,175 @@
+@import "tailwindcss";
+
+/* Blanka font (from /public/fonts/BLANKA Font/Blanka-Regular.otf) */
+@font-face {
+  font-family: "Blanka";
+  src: url("/fonts/BLANKA Font/Blanka-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --background: #000000;
+  --foreground: #e1e1e1;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(circle at 10% 20%, rgb(85, 85, 85) 0%, rgb(0, 0, 0) 90%);
+  color: var(--foreground);
+  font-family: "Blanka", var(--font-geist-sans), system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
+  letter-spacing: -0.03em;
+  min-height: 100svh;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Typography enhancements */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Blanka", var(--font-geist-sans), system-ui, sans-serif;
+  letter-spacing: -0.04em;
+}
+
+.font-mono, code, pre {
+  font-family: var(--font-geist-mono), monospace;
+  letter-spacing: -0.02em;
+}
+
+/* Subtle animated noise overlay */
+body::before {
+  content: "";
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: transparent url("http://assets.iceable.com/img/noise-transparent.png") repeat 0 0;
+  background-size: 300px 300px;
+  animation: noise-animation 0.3s steps(5) infinite;
+  opacity: 0.25;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes noise-animation {
+  0% { transform: translate(0, 0); }
+  10% { transform: translate(-2%, -3%); }
+  20% { transform: translate(-4%, 2%); }
+  30% { transform: translate(2%, -4%); }
+  40% { transform: translate(-2%, 5%); }
+  50% { transform: translate(-4%, 2%); }
+  60% { transform: translate(3%, 0); }
+  70% { transform: translate(0, 3%); }
+  80% { transform: translate(-3%, 0); }
+  90% { transform: translate(2%, 2%); }
+  100% { transform: translate(1%, 0); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+html { 
+  scroll-behavior: smooth; 
+  -webkit-tap-highlight-color: transparent; /* Remove tap highlight on mobile */
+}
+
+/* Liquid/glass container used across sections */
+.liquid-container {
+  position: relative;
+  border-radius: 24px;
+  background: rgba(255,255,255,0.10);
+  border: 1px solid rgba(168,85,247,0.45); /* purple border */
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.45), inset 0 -1px 0 rgba(255,255,255,0.08), 0 24px 60px rgba(0,0,0,0.35), 0 0 80px rgba(168,85,247,0.15), 0 0 8px rgba(0,0,0,0.45);
+}
+.liquid-container::before {
+  content: "";
+  position: absolute;
+  left: 10%;
+  right: 10%;
+  top: 0;
+  height: 1px;
+  pointer-events: none;
+  background: linear-gradient(90deg, transparent, rgba(168,85,247,0.6), transparent);
+}
+/* Subtle black glow ring */
+.liquid-container::after {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  pointer-events: none;
+  box-shadow: 0 0 10px rgba(0,0,0,0.55);
+}
+
+/* More transparent variant for low-color cards */
+.liquid-container--transparent {
+  background: rgba(255,255,255,0.03);
+  border-color: rgba(168,85,247,0.35);
+}
+
+/* Mobile optimizations */
+@media (max-width: 640px) {
+  .liquid-container {
+    border-radius: 16px;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    word-break: break-word;
+  }
+}
+
+/* Fix for mobile Safari 100vh issue */
+.min-h-screen {
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+/* Improved scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(168, 85, 247, 0.5);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(168, 85, 247, 0.7);
+}
+
+/* Transform styles for 3D effects */
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
+
+.perspective-1000px {
+  perspective: 1000px;
+}
+
+/* Pulse animation for buttons */
+@keyframes void-pulse {
+  0% { box-shadow: 0 0 0 0 rgba(147, 51, 234, 0.7); }
+  70% { box-shadow: 0 0 0 10px rgba(147, 51, 234, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(147, 51, 234, 0); }
+}
+
+.void-pulse {
+  animation: void-pulse 2s infinite;
+}
