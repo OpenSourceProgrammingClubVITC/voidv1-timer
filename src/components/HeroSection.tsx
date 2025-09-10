@@ -31,7 +31,7 @@ export default function HeroSection() {
 
       {/* Hero content */}
       <motion.div 
-        className="relative z-20 text-center px-4 sm:px-6 mt-[22vh] sm:mt-[20vh] w-full max-w-[90vw] sm:max-w-[80vw] mx-auto" 
+        className="relative z-20 text-center px-4 sm:px-6 mt-[28vh] sm:mt-[20vh] w-full max-w-[90vw] sm:max-w-[80vw] mx-auto" 
         style={{ scale: inverseScale }}
       >
         <h2 className="text-xs sm:text-sm tracking-[0.2em] uppercase text-white/70 font-mono mb-2 sm:mb-4">Embrace the unknown</h2>
