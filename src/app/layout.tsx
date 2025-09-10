@@ -3,6 +3,7 @@ import { IBM_Plex_Mono, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import VoidBackground from "@/components/VoidBackground";
 import Preloader from "@/components/Preloader";
+import { Analytics } from "@vercel/analytics/next";
 
 const geistSans = Space_Grotesk({
   variable: "--font-geist-sans",
@@ -28,6 +29,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <Preloader />
         <VoidBackground>{children}</VoidBackground>
+        <Analytics />
       </body>
     </html>
   );
