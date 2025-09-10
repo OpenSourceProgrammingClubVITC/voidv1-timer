@@ -9,7 +9,7 @@ import FAQ from "@/components/sections/FAQ";
 
 export default function Sections() {
   return (
-    <div className="relative z-20 w-full">
+    <div className="relative z-20 w-full section-container">
       <About />
       <Tracks />
       <Prizes />

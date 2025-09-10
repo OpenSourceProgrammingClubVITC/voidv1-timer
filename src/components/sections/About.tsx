@@ -193,7 +193,7 @@
                   onMouseEnter={() => setHoveredCard(index)}
                   onMouseLeave={() => setHoveredCard(null)}
                 >
-                  <div className="relative overflow-hidden rounded-2xl liquid-container liquid-container--transparent shadow-2xl min-h-[360px] sm:min-h-[400px] md:min-h-[450px] p-5 sm:p-6 md:p-7 transition-all duration-700 ease-out transform-gpu hover:scale-105">
+                  <div className="relative overflow-hidden void-card shadow-2xl min-h-[360px] sm:min-h-[400px] md:min-h-[450px] p-5 sm:p-6 md:p-7 transition-all duration-700 ease-out transform-gpu hover:scale-105">
                     {/* Background gradient removed for transparent, low-color appearance */}
                     
                     {/* Diagonal black hover effect */}
