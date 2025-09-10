@@ -292,7 +292,6 @@ export default function HeroShader({
 }: HeroShaderProps) {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const uniformsRef = useRef<Record<string, THREE.IUniform> | null>(null);
-  const mouseRef = useRef({ x: 0, y: 0 });
   const mouse = useRef(new THREE.Vector2(0.5, 0.5));
   const smoothedMouse = useRef(new THREE.Vector2(0.5, 0.5));
 
@@ -337,7 +336,7 @@ export default function HeroShader({
     camera.position.z = 1;
 
     // Clone uniforms per instance
-    const uniforms = UniformsUtils.clone(blackHoleShader.uniforms);
+    const uniforms = UniformsUtils.clone(blackHoleShader.uniforms) as Record<string, THREE.IUniform>;
     uniforms.enableBlackHole.value = enableBlackHole ? 1.0 : 0.0;
     uniforms.parallaxOffset.value.set(parallax.x, parallax.y);
     uniformsRef.current = uniforms;
@@ -391,10 +390,10 @@ export default function HeroShader({
       const sx = smoothedMouse.current.x * (typeof window !== 'undefined' ? window.innerWidth : width);
       const sy = smoothedMouse.current.y * (typeof window !== 'undefined' ? window.innerHeight : height);
       // Update both a dedicated uniform (if used elsewhere) and iMouse for the shader
-      if (!(uniforms as any).smoothedMouse) {
-        (uniforms as any).smoothedMouse = { value: new THREE.Vector2(sx, sy) } as any;
+      if (!('smoothedMouse' in uniforms)) {
+        uniforms['smoothedMouse'] = { value: new THREE.Vector2(sx, sy) } as THREE.IUniform;
       } else {
-        (uniforms as any).smoothedMouse.value.set(sx, sy);
+        (uniforms['smoothedMouse'].value as THREE.Vector2).set(sx, sy);
       }
       uniforms.iMouse.value.x = sx;
       uniforms.iMouse.value.y = sy;

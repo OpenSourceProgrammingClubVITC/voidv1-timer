@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import type { ReactNode } from "react";
 import HeroShader from "@/components/HeroShader";
 

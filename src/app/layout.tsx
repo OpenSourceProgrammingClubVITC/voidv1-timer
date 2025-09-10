@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, IBM_Plex_Mono, Space_Grotesk } from "next/font/google";
+import { IBM_Plex_Mono, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import VoidBackground from "@/components/VoidBackground";
 import Preloader from "@/components/Preloader";

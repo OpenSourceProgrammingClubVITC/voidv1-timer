@@ -1,9 +1,7 @@
 "use client";
 
-import React, { useState, useEffect, useRef } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
-import { ChevronLeft, ChevronRight, Linkedin } from 'lucide-react';
-import { OptimizedImage } from '@/components/ui/optimized-image';
 
 // Judge data
 // const JUDGES = [

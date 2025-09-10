@@ -8,7 +8,7 @@ export default function Preloader() {
 
   useEffect(() => {
     // Simulate asset loading with incremental progress
-    let startTime = Date.now();
+    const startTime = Date.now();
     const duration = 1500; // 1.5 seconds total loading time
     
     const interval = setInterval(() => {

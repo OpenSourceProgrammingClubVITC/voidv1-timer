@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+// import Link from "next/link"; // Unused
 import { useEffect, useRef, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { motion } from "framer-motion";

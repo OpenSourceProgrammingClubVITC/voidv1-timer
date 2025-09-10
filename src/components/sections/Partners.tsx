@@ -70,7 +70,7 @@ export default function Partners() {
       setFloatingIndex((prev) => (prev + 1) % partners.length);
     }, 2500);
     return () => clearInterval(interval);
-  }, []);
+  }, [partners.length]);
 
   return (
     <section id="partners" className="scroll-mt-32 min-h-screen flex items-center py-10 relative overflow-hidden">
