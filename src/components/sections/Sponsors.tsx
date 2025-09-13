@@ -13,11 +13,13 @@ export default function Sponsors() {
         <h3 className="text-2xl font-bold text-yellow-400 mb-6">Gold Sponsor</h3>
         <div className="flex justify-center">
           <div className="p-6 bg-gradient-to-br from-yellow-400/20 to-yellow-600/20 rounded-xl border border-yellow-400/30 backdrop-blur-sm">
+            <a href="https://devfolio.co/" target="_blank" rel="noopener noreferrer"> 
             <img 
-              src="/devfolio.jpg" 
-              alt="Devfolio" 
-              className="w-auto h-32 rounded-lg shadow-lg" 
+              src="/Devfolio.svg" 
+              alt="DEVFOLIO LOGO" 
+              className="w-auto h-32 rounded-lg shadow-lg bg-white p-4" 
             />
+            </a>
           </div>
         </div>
       </div>
@@ -27,18 +29,23 @@ export default function Sponsors() {
         <h3 className="text-xl font-bold text-gray-300 mb-6">Silver Sponsors</h3>
         <div className="grid gap-8 md:grid-cols-2 place-items-center max-w-2xl mx-auto">
           <div className="p-4 bg-gradient-to-br from-gray-400/20 to-gray-600/20 rounded-xl border border-gray-400/30 backdrop-blur-sm">
+          <a href="https://ethindia.co/" target="_blank" rel="noopener noreferrer">
             <img 
-              src="/EthIndia.png" 
-              alt="ETHIndia" 
-              className="w-auto h-24 rounded-lg shadow-lg" 
+              src="/ethindia.svg" 
+              alt="ETHINDIA LOGO" 
+              className="w-auto h-24 rounded-lg shadow-lg bg-white p-4" 
             />
+          </a>
+
           </div>
           <div className="p-4 bg-gradient-to-br from-gray-400/20 to-gray-600/20 rounded-xl border border-gray-400/30 backdrop-blur-sm">
+            <a href="https://polygon.technology/" target="_blank" rel="noopener noreferrer">
             <img 
               src="/polygon.jpg" 
-              alt="Polygon" 
+              alt="POLYGON LOGO" 
               className="w-auto h-24 rounded-lg shadow-lg" 
             />
+            </a>
           </div>
         </div>
       </div>
