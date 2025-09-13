@@ -4,6 +4,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { motion } from "framer-motion";
+import React from "react";
 
 const nav = [
   { href: "#about", label: "About" },
@@ -24,6 +25,17 @@ export default function Navbar() {
   const navRef = useRef<HTMLDivElement>(null);
   const indicatorRef = useRef<HTMLDivElement>(null);
   const linkRefs = useRef<Record<string, HTMLAnchorElement>>({});
+
+  React.useEffect(() => {
+    const script = document.createElement('script');
+    script.src = 'https://apply.devfolio.co/v2/sdk.js';
+    script.async = true;
+    script.defer = true;
+    document.body.appendChild(script);
+    return () => {
+      document.body.removeChild(script);
+    }
+}, []);
 
   // Keep track of scroll position
   useEffect(() => {
@@ -243,21 +255,12 @@ export default function Navbar() {
             </div>
             
             <div className="ml-6">
-              <a
-                href="#register"
-                className="px-4 py-1.5 rounded-full text-sm text-white transition-colors hover:bg-white/15 cursor-pointer"
-                style={{
-                  background: "rgba(255, 255, 255, 0.1)",
-                  border: "1px solid rgba(255, 255, 255, 0.1)",
-                  boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)"
-                }}
-                onClick={(e) => {
-                  e.preventDefault();
-                  handleNavClick("#register");
-                }}
+              <div
+                className="apply-button h-9 w-48 rounded-full"
+                data-hackathon-slug="voidv1"
+                data-button-theme="light"
               >
-                Register
-              </a>
+              </div>
             </div>
           </div>
         </div>
@@ -316,17 +319,12 @@ export default function Navbar() {
               })}
               
               <div className="py-4">
-                <a
-                  href="#register"
-                  className="block w-full py-2.5 text-center rounded-full text-white bg-purple-600/80 hover:bg-purple-600 transition-colors cursor-pointer"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    setOpen(false);
-                    handleNavClick("#register");
-                  }}
-                >
-                  Register
-                </a>
+              <div
+                className="apply-button h-9 w-48 rounded-full"
+                data-hackathon-slug="voidv1"
+                data-button-theme="light"
+              >
+              </div>
               </div>
             </div>
           </motion.nav>

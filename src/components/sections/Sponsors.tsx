@@ -30,35 +30,12 @@ export default function Sponsors() {
         {/* <p className="text-white/80 mt-4">Choose a tier that matches your goals – each with premium liquid-glass cards.</p> */}
       </div>
 
-      {/* <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-        {tiers.map((t) => (
-          <div key={t.name} className="group">
-            <div className="rounded-2xl p-6 liquid-container transition-all duration-500 hover:scale-105">
-              <div className="flex items-center mb-4">
-                <span className="text-2xl mr-3 group-hover:scale-110 transition-transform duration-300">{t.icon}</span>
-                <h3 className={`font-bold text-lg bg-gradient-to-r ${t.gradient} bg-clip-text text-transparent`}>{t.name} Tier</h3>
-              </div>
-              <ul className="space-y-2 text-sm text-white/85">
-                {t.features.map((f) => (
-                  <li key={f} className="flex items-center">
-                    <div className="w-1 h-1 bg-white/60 rounded-full mr-3 flex-shrink-0"></div>
-                    {f}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        ))}
-      </div> */}
-      <div className="flex flex-col items-center justify-center w-full h-full">
-      <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white via-purple-300 to-white mb-3">
-        COMING SOON  .   .   .
-      </h1>
-      {/* <div className="h-px w-40 bg-gradient-to-r from-transparent via-purple-500/60 to-transparent"></div> */}
-      {/* <p className="text-white/70 mt-3 text-xs sm:text-sm tracking-[0.1em] uppercase font-mono">
-        Under Construction
-      </p> */}
-    </div>
+      
+        <div className="grid gap-8 md:grid-cols-3 place-items-center">
+        <img src="/devfolio.jpg" alt="Sponsors" className="col-span-1 w-auto h-40 rounded-lg shadow-lg" />
+        <img src="/EthIndia.png" alt="Sponsors" className="col-span-1 w-auto h-40 rounded-lg shadow-lg" />
+        <img src="/polygon.jpg" alt="Sponsors" className="col-span-1 w-auto h-40 rounded-lg shadow-lg" />
+      </div>
     </section>
   );
 }
