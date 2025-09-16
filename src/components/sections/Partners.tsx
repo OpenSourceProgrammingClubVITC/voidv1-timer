@@ -1,76 +1,9 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Image from 'next/image';
 
 export default function Partners() {
-  const [hoveredPartner, setHoveredPartner] = useState(null);
-  const [floatingIndex, setFloatingIndex] = useState(0);
-
-  const partners = [
-    { 
-      name: "TechCorp", 
-      type: "Platinum Sponsor",
-      logo: "TC",
-      gradient: "from-blue-500 to-cyan-500",
-      bgGradient: "from-blue-500/20 to-cyan-500/30",
-      glow: "blue-500/40",
-      description: "Leading tech innovation"
-    },
-    { 
-      name: "InnovateAI", 
-      type: "Gold Sponsor",
-      logo: "AI",
-      gradient: "from-purple-500 to-pink-500",
-      bgGradient: "from-purple-500/20 to-pink-500/30",
-      glow: "purple-500/40",
-      description: "AI & Machine Learning"
-    },
-    { 
-      name: "DevTools Pro", 
-      type: "Silver Sponsor",
-      logo: "DT",
-      gradient: "from-emerald-500 to-teal-500",
-      bgGradient: "from-emerald-500/20 to-teal-500/30",
-      glow: "emerald-500/40",
-      description: "Developer productivity tools"
-    },
-    { 
-      name: "CloudBase", 
-      type: "Infrastructure Partner",
-      logo: "CB",
-      gradient: "from-orange-500 to-red-500",
-      bgGradient: "from-orange-500/20 to-red-500/30",
-      glow: "orange-500/40",
-      description: "Cloud infrastructure solutions"
-    },
-    { 
-      name: "DesignStudio", 
-      type: "Design Partner",
-      logo: "DS",
-      gradient: "from-pink-500 to-rose-500",
-      bgGradient: "from-pink-500/20 to-rose-500/30",
-      glow: "pink-500/40",
-      description: "Creative design services"
-    },
-    { 
-      name: "StartupHub", 
-      type: "Community Partner",
-      logo: "SH",
-      gradient: "from-violet-500 to-purple-500",
-      bgGradient: "from-violet-500/20 to-purple-500/30",
-      glow: "violet-500/40",
-      description: "Startup ecosystem support"
-    }
-  ];
-
-  // Auto floating effect
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setFloatingIndex((prev) => (prev + 1) % partners.length);
-    }, 2500);
-    return () => clearInterval(interval);
-  }, [partners.length]);
 
   return (
     <section id="partners" className="scroll-mt-32 min-h-screen flex items-center py-10 relative overflow-hidden">
@@ -99,29 +32,59 @@ export default function Partners() {
           </p>
         </div>
 
-        {/* Partners Feature Card for GDG */}
-        <div className="max-w-3xl mx-auto mb-16">
-          <div className="rounded-2xl p-6 md:p-8 liquid-container">
-            <div className="flex flex-col md:flex-row items-center gap-6">
-              <div className="relative w-full md:w-56 aspect-[4/3] rounded-xl overflow-hidden flex-shrink-0">
-                <Image
-                  src="/gemini.jpg" // Replace with your GDG image, e.g. /partners/gdg.jpg
-                  alt="GDG logo"
-                  fill
-                  sizes="(max-width: 768px) 100vw, 224px"
-                  className="object-cover"
-                  priority
-                />
-              </div>
-              <div className="text-white/90">
-                <h3 className="text-xl font-bold mb-1">Google Developer Groups (GDG)</h3>
-                <p className="text-white/75 text-sm">
-                  Community led groups for developers interested in Google technologies. GDGs host meetups, workshops
-                  and hackathons to help builders learn, connect and grow.
-                </p>
+        {/* Featured Partner Cards - unified layout */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto mb-16">
+          {[
+            {
+              name: "Google Student Group",
+              description:
+                "Community led groups for developers interested in Google technologies. GDGs host meetups, workshops and hackathons to help builders learn, connect and grow.",
+              logo: "/gemini.jpg",
+              link: "https://developers.google.com/community/gdg",
+              ctaLabel: "Learn more"
+            },
+            {
+              name: "Asymmetric Club",
+              description:
+                "A student‑founded technical community organizing workshops, hackathons, webinars, and projects to empower continuous learning and growth across tech domains.",
+              logo: "/asy.png",
+              link: "https://www.linkedin.com/company/club-asymmetric/",
+              ctaLabel: "LinkedIn"
+            }
+          ].map((p) => (
+            <div key={p.name} className="rounded-2xl p-6 md:p-8 liquid-container">
+              <div className="flex flex-col md:flex-row items-center gap-6">
+                <div className="w-24 h-24 rounded-xl overflow-hidden relative flex-shrink-0">
+                  <Image
+                    src={p.logo}
+                    alt={`${p.name} logo`}
+                    fill
+                    sizes="96px"
+                    className="object-contain p-2"
+                    priority
+                  />
+                </div>
+                <div className="text-white/90 w-full">
+                  <h3 className="text-xl font-bold mb-1">{p.name}</h3>
+                  <p className="text-white/75 text-sm mb-3">{p.description}</p>
+                  <div>
+                    <a
+                      href={p.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center px-3 py-1.5 rounded-lg bg-white/10 hover:bg-white/20 border border-white/30 text-white text-sm transition-colors"
+                    >
+                      <span className="mr-2">{p.ctaLabel}</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4">
+                        <path d="M14 3h7v7h-2V6.414l-9.293 9.293-1.414-1.414L17.586 5H14V3z"/>
+                        <path d="M19 19H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2v7z"/>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
+          ))}
         </div>
 
         {/* Partnership Tiers */}
