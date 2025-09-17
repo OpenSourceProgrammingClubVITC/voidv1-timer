@@ -44,12 +44,83 @@ export default function Partners() {
               ctaLabel: "Learn more"
             },
             {
+              name: "Perplexity AI",
+              description:
+                "AI-powered answer engine combining large language models with live web search to deliver fast, cited, up-to-date answers.",
+              logo: "/perplexity.png",
+              link: "https://www.perplexity.ai/",
+              ctaLabel: "Visit"
+            }
+          ].map((p) => (
+            <div key={p.name} className="rounded-2xl p-6 md:p-8 liquid-container">
+              <div className="flex flex-col md:flex-row items-center gap-6">
+                <div className="w-24 h-24 rounded-xl overflow-hidden relative flex-shrink-0">
+                  <Image
+                    src={p.logo}
+                    alt={`${p.name} logo`}
+                    fill
+                    sizes="96px"
+                    className="object-contain p-2"
+                    priority
+                  />
+                </div>
+                <div className="text-white/90 w-full">
+                  <h3 className="text-xl font-bold mb-1">{p.name}</h3>
+                  <p className="text-white/75 text-sm mb-3">{p.description}</p>
+                  <div>
+                    <a
+                      href={p.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center px-3 py-1.5 rounded-lg bg-white/10 hover:bg-white/20 border border-white/30 text-white text-sm transition-colors"
+                    >
+                      <span className="mr-2">{p.ctaLabel}</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4">
+                        <path d="M14 3h7v7h-2V6.414l-9.293 9.293-1.414-1.414L17.586 5H14V3z"/>
+                        <path d="M19 19H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2v7z"/>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Other Partners */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+          {[
+            {
               name: "Asymmetric Club",
               description:
                 "A student‑founded technical community organizing workshops, hackathons, webinars, and projects to empower continuous learning and growth across tech domains.",
               logo: "/asy.png",
               link: "https://www.linkedin.com/company/club-asymmetric/",
               ctaLabel: "LinkedIn"
+            },
+            {
+              name: "AIDRIOTX",
+              description:
+                "A student community empowering people through AI, robotics, IoT and tech events, workshops and projects.",
+              logo: "/aidriot.jpeg",
+              link: "https://www.linkedin.com/company/aidriotx-sist/?viewAsMember=true",
+              ctaLabel: "LinkedIn"
+            },
+            {
+              name: "Aurelian Racing",
+              description:
+                "Student motorsport team fostering engineering excellence through design, build and racing initiatives.",
+              logo: "/aurelian.jpeg",
+              link: "https://www.instagram.com/aurelian_racing?igsh=MWpraGEzYnNjd3BlZg==",
+              ctaLabel: "Instagram"
+            },
+            {
+              name: "SJCE Motorsport",
+              description:
+                "Formula Student team from SJCE focused on innovation, design and competitive motorsport.",
+              logo: "/sjce.jpeg",
+              link: "https://www.instagram.com/sjce_motorsport?igsh=MXFqOHMwOWJlNHdpbA==",
+              ctaLabel: "Instagram"
             }
           ].map((p) => (
             <div key={p.name} className="rounded-2xl p-6 md:p-8 liquid-container">
