@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
+import SectionTitle from '../SectionTitle';
 
 export default function Partners() {
 
@@ -19,14 +20,8 @@ export default function Partners() {
       </div>
 
       <div className="container mx-auto px-6 relative z-10 max-w-6xl">
-        {/* Header */}
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight text-white mb-4 relative">
-            <span className="bg-gradient-to-r from-white via-purple-200 via-cyan-200 to-white bg-clip-text text-transparent">
-              Our Partners
-            </span>
-            <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-28 h-1 bg-gradient-to-r from-purple-500 via-pink-500 to-emerald-500 rounded-full opacity-80"></div>
-          </h2>
+          <SectionTitle>Our Partnes</SectionTitle>
           <p className="text-white/85 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
             Powered by industry leaders who believe in fostering innovation and supporting the next generation of builders.
           </p>

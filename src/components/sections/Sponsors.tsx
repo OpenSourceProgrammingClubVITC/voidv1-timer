@@ -1,12 +1,9 @@
+import SectionTitle from "../SectionTitle";
+
 export default function Sponsors() {
   return (
     <section id="sponsors" className="scroll-mt-32 container mx-auto px-6 py-10 md:py-10">
-      <div className="text-center mb-12">
-        <h2 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight text-white relative inline-block">
-          <span className="bg-gradient-to-r from-white via-purple-200 via-cyan-200 to-white bg-clip-text text-transparent">Sponsors</span>
-          <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-purple-500 via-pink-500 to-emerald-500 rounded-full opacity-80"></span>
-        </h2>
-      </div>
+      <SectionTitle>Sponsors</SectionTitle>
 
       {/* Gold Sponsor */}
       <div className="text-center mb-12">

@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import SectionTitle from '../SectionTitle';
 
 export default function Prizes() {
   const [hoveredPrize, setHoveredPrize] = useState<number | null>(null);
@@ -68,16 +69,9 @@ export default function Prizes() {
       </div>
 
       <div className="container mx-auto px-6 relative z-10 max-w-6xl">
+      <SectionTitle>Epic Prizes</SectionTitle>
         {/* Hype Header */}
         <div className="text-center mb-12">
-          <div className="relative inline-block">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight text-white mb-4 relative">
-              <span className="bg-gradient-to-r from-white via-purple-200 via-cyan-200 to-white bg-clip-text text-transparent drop-shadow-lg">
-                Epic Prizes
-              </span>
-            </h2>
-            <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-32 h-1 bg-gradient-to-r from-purple-500 via-pink-500 to-emerald-500 rounded-full opacity-80"></div>
-          </div>
           <p className="text-white/90 text-lg md:text-xl font-medium mt-6 max-w-2xl mx-auto">
             <span className="text-yellow-300">Compete for glory!</span> Amazing rewards await the most innovative builders and creators.
           </p>
