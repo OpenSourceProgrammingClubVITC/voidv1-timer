@@ -21,7 +21,7 @@ const QA = [
   },
   {
     q: "Is there a fee?",
-    a: "No. VOID is completely free to attend.",
+    a: "The first round is completely free to attend. However, the second round requires a fee of Rs. 200.",
   },
 ];
 
