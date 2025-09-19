@@ -2,6 +2,7 @@
     'use client';
 
     import React, { useState, useEffect } from 'react';
+import SectionTitle from '../SectionTitle';
 
     export default function About() {
       const [hoveredCard, setHoveredCard] = useState<number | null>(null);
@@ -124,18 +125,7 @@
           <div className="container mx-auto max-w-7xl relative z-10">
             {/* Header */}
             <div className="text-center mb-12">
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight mb-4">
-                <span 
-                  className="bg-gradient-to-r from-white via-purple-200 via-cyan-200 to-white bg-clip-text text-transparent"
-                  style={{ 
-                    backgroundSize: '300% 100%',
-                    animation: 'gradientShift 3s ease-in-out infinite'
-                  }}
-                >
-                  About VOID
-                </span>
-              </h2>
-              <div className="w-20 h-0.5 mx-auto mb-4 bg-gradient-to-r from-purple-500 via-pink-500 to-emerald-500 rounded-full opacity-80" />
+              <SectionTitle>About VOID</SectionTitle>
               <p className="text-white/90 text-base md:text-lg leading-relaxed max-w-3xl mx-auto">
                 <span className="font-black text-purple-400">24-hour</span> in‑person hackathon where builders explore ideas at the edge —
                 <span className="bg-gradient-to-r from-purple-300 to-cyan-300 bg-clip-text text-transparent font-semibold"> fast, focused, fearlessly.</span>

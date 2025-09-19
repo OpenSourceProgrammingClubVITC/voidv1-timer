@@ -1,5 +1,6 @@
 "use client";
 
+import SectionTitle from "../SectionTitle";
 import styles from "./TracksAccordion.module.css";
 import { useCallback, useEffect, useRef, useState } from "react";
 
@@ -150,14 +151,7 @@ export default function Tracks() {
 
   return (
     <section id="tracks" className="scroll-mt-32 container mx-auto px-0 md:px-6 py-10 md:py-10">
-      <div className="px-6 md:px-0 mb-8 text-center">
-        <h2 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight text-white inline-block relative">
-          <span className="bg-gradient-to-r from-white via-purple-200 via-cyan-200 to-white bg-clip-text text-transparent">
-            Tracks
-          </span>
-          <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-purple-500 via-pink-500 to-emerald-500 rounded-full opacity-80"></span>
-        </h2>
-      </div>
+      <SectionTitle>Tracks</SectionTitle>
 
       <div className={styles.sliderContainer}>
         <div className={styles.accordionSlider}>

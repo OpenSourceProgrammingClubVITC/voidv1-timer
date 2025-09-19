@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 import { Card } from '@/components/ui/card';
 import { TwitterLogoIcon, LinkedInLogoIcon, GitHubLogoIcon } from '@radix-ui/react-icons';
 import { Globe } from 'lucide-react';
+import SectionTitle from '../SectionTitle';
 
 
 interface Organizer {
@@ -53,26 +54,14 @@ const OrganisersSection: React.FC = () => {
   return (
     <section id="organisers" className="text-white py-10 px-4 relative z-10">
       <div className="max-w-6xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+        <div
           className="text-center mb-16 space-y-6"
         >
-          <h2 className="mb-10 text-center font-bold tracking-wider leading-tight" style={{ fontSize: "clamp(40px, 10vw, 70px)" }}>
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-white via-purple-200 via-cyan-200 to-white">VOID ORGANISERS</span>
-          </h2>
-          <motion.div 
-            className="h-1 w-32 bg-gradient-to-r from-purple-600 to-violet-800 mx-auto mb-10 rounded-full"
-            initial={{ width: 0, opacity: 0 }}
-            whileInView={{ width: "8rem", opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          />
+          <SectionTitle>VOID Organizers</SectionTitle>
           <p className="text-lg text-gray-300 max-w-3xl mx-auto">
             VOID is powered by OSPC x BIC, bringing together the best minds to create an electrifying innovation battlefield in the digital realm.
           </p>
-        </motion.div>
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-24 px-3">
           {organizers.map((organizer) => (

@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react';
-import { motion } from 'framer-motion';
+import SectionTitle from '../SectionTitle';
 
 // Judge data
 // const JUDGES = [
@@ -134,28 +134,11 @@ export default function JudgesSection() {
   // };
   return (
     <section id="judges" className="py-10 text-white relative overflow-hidden">
-      {/* <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 relative z-10"> */}
-        <motion.div 
-          className="mb-20 md:mb-24 text-center"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          
-          <h2 className="mb-10 text-center font-bold tracking-wider leading-tight font-heading" style={{ fontSize: "clamp(40px, 10vw, 70px)" }}>
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-white via-purple-200 via-cyan-200 to-white">MEET OUR JUDGES</span>
-          </h2>
-          <motion.div 
-            className="h-1 w-32 bg-gradient-to-r from-purple-500 via-pink-500 to-emerald-500 mx-auto mb-10 rounded-full"
-            initial={{ width: 0, opacity: 0 }}
-            animate={{ width: "8rem", opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          />
-        </motion.div>
-        <div className="flex flex-col items-center justify-center w-full h-full">
-      <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white via-purple-300 to-white mb-3">
-        COMING SOON  .   .   .
-      </h1>
+      <SectionTitle>Meet Our Judges</SectionTitle>
+      <div className="flex flex-col items-center justify-center w-full h-full">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white via-purple-300 to-white mb-3 mt-12">
+        COMING SOON...
+        </h1>
       {/* <div className="h-px w-40 bg-gradient-to-r from-transparent via-purple-500/60 to-transparent"></div> */}
       {/* <p className="text-white/70 mt-3 text-xs sm:text-sm tracking-[0.1em] uppercase font-mono">
         Under Construction
