@@ -203,14 +203,18 @@ export default function Partners() {
 
         {/* Partnership CTA */}
         <div className="text-center mt-12">
-          <div className="inline-flex items-center space-x-3 px-8 py-4 rounded-2xl bg-gradient-to-r from-purple-500/20 to-blue-500/20 backdrop-blur-xl border border-white/30 group hover:scale-105 transition-all duration-300 cursor-pointer">
+          <a 
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=opensourceprogrammingclub.vitc@gmail.com&su=Partnership Inquiry&body=Hello! I'm interested in partnering with VOID hackathon."
+
+            className="inline-flex items-center space-x-3 px-8 py-4 rounded-2xl bg-gradient-to-r from-purple-500/20 to-blue-500/20 backdrop-blur-xl border border-white/30 group hover:scale-105 transition-all duration-300 cursor-pointer"
+          >
             <span className="text-2xl group-hover:rotate-12 transition-transform duration-300">🤝</span>
             <div className="text-left">
               <p className="text-white font-semibold">Interested in partnering?</p>
               <p className="text-white/70 text-sm">Join our mission to empower builders</p>
             </div>
             <span className="text-2xl group-hover:-rotate-12 transition-transform duration-300">✨</span>
-          </div>
+          </a>
         </div>
       </div>
     </section>
