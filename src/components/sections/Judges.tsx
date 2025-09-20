@@ -136,7 +136,7 @@ export default function JudgesSection() {
     <section id="judges" className="py-10 text-white relative overflow-hidden">
       <SectionTitle>Meet Our Judges</SectionTitle>
       <div className="flex flex-col items-center justify-center w-full h-full">
-        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white via-purple-300 to-white mb-3 mt-12">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white via-purple-300 to-white my-12">
         COMING SOON...
         </h1>
       {/* <div className="h-px w-40 bg-gradient-to-r from-transparent via-purple-500/60 to-transparent"></div> */}

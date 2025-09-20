@@ -10,7 +10,7 @@ export default function SectionTitle({
   className,
 }: SectionTitleProps) {
   return (
-    <div className={`text-center ${className || ""}`}>
+    <div className={`text-center mb-8 ${className || ""}`}>
       <h2 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tight mb-4">
         <span
           className="bg-gradient-to-r from-white from-40% via-purple-300 via-60% to-white bg-clip-text text-transparent"

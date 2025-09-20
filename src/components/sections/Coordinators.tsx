@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import SectionTitle from "../SectionTitle";
-import { LiquidGlassCard } from "../LiquidGlassCard";
+import LiquidGlassCard from "../LiquidGlassCard";
 import SectionSubtitle from "../SectionSubtitle";
 
 const COORDINATORS_NAMES = {
@@ -85,7 +85,7 @@ export default function Coordinators() {
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
-        <SectionTitle className="mb-8">Coordinators</SectionTitle>
+        <SectionTitle>Coordinators</SectionTitle>
         <SectionSubtitle>Faculty Coordinators</SectionSubtitle>
         <p className="text-center text-lg text-gray-300 max-w-xl mx-auto mb-8">
           The mentors who guide us, support the team, and keep everything on
@@ -126,7 +126,7 @@ export default function Coordinators() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-5xl mx-auto">
           {COORDINATORS_NAMES.student.map((info) => (
             <LiquidGlassCard key={info.name}>
-              <div className="flex flex-col md:flex-row items-center gap-6 p-4">
+              <div className="flex flex-col md:flex-row items-center gap-6 p-6">
                 <div className="size-28 rounded-xl overflow-hidden relative flex-shrink-0">
                   <Image
                     src={info.photoUrl}
