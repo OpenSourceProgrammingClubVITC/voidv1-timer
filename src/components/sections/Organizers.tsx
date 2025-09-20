@@ -1,13 +1,17 @@
-'use client';
+"use client";
 
-import React from 'react';
-import Image from 'next/image';
-import { motion } from 'framer-motion';
-import { Card } from '@/components/ui/card';
-import { TwitterLogoIcon, LinkedInLogoIcon, GitHubLogoIcon } from '@radix-ui/react-icons';
-import { Globe } from 'lucide-react';
-import SectionTitle from '../SectionTitle';
-
+import React from "react";
+import Image from "next/image";
+import { motion } from "framer-motion";
+import { Card } from "@/components/ui/card";
+import {
+  TwitterLogoIcon,
+  LinkedInLogoIcon,
+  GitHubLogoIcon,
+} from "@radix-ui/react-icons";
+import { Globe } from "lucide-react";
+import SectionTitle from "../SectionTitle";
+import { LiquidGlassCard } from "../LiquidGlassCard";
 
 interface Organizer {
   id: number;
@@ -32,10 +36,11 @@ const organizers: Organizer[] = [
     imageUrl: "/ospc.png",
     socialLinks: {
       twitter: "https://twitter.com/ospcvitc",
-      linkedin: "https://www.linkedin.com/company/opensource-programming-club-vitc",
+      linkedin:
+        "https://www.linkedin.com/company/opensource-programming-club-vitc",
       github: "https://github.com/OSPC-VITC",
       website: "https://ospcvitc.club",
-    }
+    },
   },
   {
     id: 2,
@@ -45,8 +50,8 @@ const organizers: Organizer[] = [
     imageUrl: "/bi.jpg",
     socialLinks: {
       twitter: "https://twitter.com/vitchennai",
-      linkedin: "https://www.linkedin.com/company/bic-vitc/"
-    }
+      linkedin: "https://www.linkedin.com/company/bic-vitc/",
+    },
   },
 ];
 
@@ -54,12 +59,11 @@ const OrganisersSection: React.FC = () => {
   return (
     <section id="organisers" className="text-white py-10 px-4 relative z-10">
       <div className="max-w-6xl mx-auto">
-        <div
-          className="text-center mb-16 space-y-6"
-        >
+        <div className="text-center mb-16 space-y-6">
           <SectionTitle>VOID Organizers</SectionTitle>
           <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-            VOID is powered by OSPC x BIC, bringing together the best minds to create an electrifying innovation battlefield in the digital realm.
+            VOID is powered by OSPC x BIC, bringing together the best minds to
+            create an electrifying innovation battlefield in the digital realm.
           </p>
         </div>
 
@@ -73,7 +77,7 @@ const OrganisersSection: React.FC = () => {
               transition={{ duration: 0.5 }}
               className="glow-wrapper w-full"
             >
-              <Card className="relative h-full bg-black/20 hover:bg-black/30 transition-colors overflow-hidden shadow-xl hover:shadow-2xl liquid-container rounded-2xl">
+              <LiquidGlassCard>
                 <div className="p-6 space-y-4">
                   <div className="relative h-44 w-full mb-4 flex items-center justify-center">
                     <div className="relative w-[90%] h-full">
@@ -87,34 +91,50 @@ const OrganisersSection: React.FC = () => {
                       />
                     </div>
                   </div>
-                  
+
                   <div className="space-y-3">
                     <div className="space-y-2">
-                      <h3 className="text-3xl font-bold text-white tracking-wide font-heading">{organizer.name}</h3>
-                      <p className="text-white/85 font-medium text-lg">{organizer.role}</p>
-                      <p className="text-gray-300 leading-relaxed text-base">{organizer.bio}</p>
+                      <h3 className="text-3xl font-bold text-white tracking-wide font-heading">
+                        {organizer.name}
+                      </h3>
+                      <p className="text-white/85 font-medium text-lg">
+                        {organizer.role}
+                      </p>
+                      <p className="text-gray-300 leading-relaxed text-base">
+                        {organizer.bio}
+                      </p>
                     </div>
 
                     <div className="flex gap-4 mt-4">
-                      {Object.entries(organizer.socialLinks).map(([platform, url]) => (
-                        <a
-                          key={platform}
-                          href={url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-white/85 hover:text-white transition-colors"
-                        >
-                          <span className="sr-only">{platform}</span>
-                          {platform === 'twitter' && <TwitterLogoIcon className="h-6 w-6" />}
-                          {platform === 'linkedin' && <LinkedInLogoIcon className="h-6 w-6" />}
-                          {platform === 'github' && <GitHubLogoIcon className="h-6 w-6" />}
-                          {platform === 'website' && <Globe className="h-6 w-6" />}
-                        </a>
-                      ))}
+                      {Object.entries(organizer.socialLinks).map(
+                        ([platform, url]) => (
+                          <a
+                            key={platform}
+                            href={url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-white/85 hover:text-white transition-colors"
+                          >
+                            <span className="sr-only">{platform}</span>
+                            {platform === "twitter" && (
+                              <TwitterLogoIcon className="h-6 w-6" />
+                            )}
+                            {platform === "linkedin" && (
+                              <LinkedInLogoIcon className="h-6 w-6" />
+                            )}
+                            {platform === "github" && (
+                              <GitHubLogoIcon className="h-6 w-6" />
+                            )}
+                            {platform === "website" && (
+                              <Globe className="h-6 w-6" />
+                            )}
+                          </a>
+                        ),
+                      )}
                     </div>
                   </div>
                 </div>
-              </Card>
+              </LiquidGlassCard>
             </motion.div>
           ))}
         </div>
@@ -138,7 +158,7 @@ const OrganisersSection: React.FC = () => {
         }
 
         .glow-wrapper::before {
-          content: '';
+          content: "";
           position: absolute;
           inset: -3px;
           background: transparent;
@@ -149,14 +169,22 @@ const OrganisersSection: React.FC = () => {
         .card-container {
           position: relative;
           transition: all 0.3s ease;
-          background: linear-gradient(135deg, rgba(76, 29, 149, 0.15), rgba(0, 0, 0, 0.4));
+          background: linear-gradient(
+            135deg,
+            rgba(76, 29, 149, 0.15),
+            rgba(0, 0, 0, 0.4)
+          );
         }
 
         .card-container::before {
-          content: '';
+          content: "";
           position: absolute;
           inset: 0;
-          background: radial-gradient(circle at center, rgba(76, 29, 149, 0.2), transparent 70%);
+          background: radial-gradient(
+            circle at center,
+            rgba(76, 29, 149, 0.2),
+            transparent 70%
+          );
           pointer-events: none;
         }
 
@@ -164,7 +192,7 @@ const OrganisersSection: React.FC = () => {
           pointer-events: none;
           position: absolute;
           --w: 2px;
-          --g: #fff0, #9333EA 50%, #9333EA 50%, #fff0;
+          --g: #fff0, #9333ea 50%, #9333ea 50%, #fff0;
           z-index: 30;
           filter: drop-shadow(0 0 5px rgba(147, 51, 234, 1));
         }
@@ -195,10 +223,11 @@ const OrganisersSection: React.FC = () => {
 
         .l {
           left: 0;
-          background: linear-gradient(to bottom, 
-            #fff0 0%, 
-            #9333EA 15%, 
-            #9333EA 85%, 
+          background: linear-gradient(
+            to bottom,
+            #fff0 0%,
+            #9333ea 15%,
+            #9333ea 85%,
             #fff0 100%
           );
           top: 0;
@@ -209,10 +238,11 @@ const OrganisersSection: React.FC = () => {
 
         .r {
           right: 0;
-          background: linear-gradient(to bottom, 
-            #fff0 0%, 
-            #9333EA 15%, 
-            #9333EA 85%, 
+          background: linear-gradient(
+            to bottom,
+            #fff0 0%,
+            #9333ea 15%,
+            #9333ea 85%,
             #fff0 100%
           );
           top: 0;
@@ -223,10 +253,11 @@ const OrganisersSection: React.FC = () => {
 
         .t {
           top: 0;
-          background: linear-gradient(to right, 
-            #fff0 0%, 
-            #9333EA 15%, 
-            #9333EA 85%, 
+          background: linear-gradient(
+            to right,
+            #fff0 0%,
+            #9333ea 15%,
+            #9333ea 85%,
             #fff0 100%
           );
           left: 0;
@@ -237,10 +268,11 @@ const OrganisersSection: React.FC = () => {
 
         .b {
           bottom: 0;
-          background: linear-gradient(to right, 
-            #fff0 0%, 
-            #9333EA 15%, 
-            #9333EA 85%, 
+          background: linear-gradient(
+            to right,
+            #fff0 0%,
+            #9333ea 15%,
+            #9333ea 85%,
             #fff0 100%
           );
           left: 0;

@@ -1,10 +1,16 @@
+import { ReactNode } from "react";
+
 interface SectionTitleProps {
-  children: string;
+  children: ReactNode;
+  className?: string;
 }
 
-export default function SectionTitle({ children }: SectionTitleProps) {
+export default function SectionTitle({
+  children,
+  className,
+}: SectionTitleProps) {
   return (
-    <div className="text-center">
+    <div className={`text-center ${className || ""}`}>
       <h2 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tight mb-4">
         <span
           className="bg-gradient-to-r from-white from-40% via-purple-300 via-60% to-white bg-clip-text text-transparent"
