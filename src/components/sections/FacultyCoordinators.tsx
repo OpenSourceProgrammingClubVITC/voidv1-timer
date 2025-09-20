@@ -28,7 +28,7 @@ const FACULTY_COORDINATORS_NAMES = [
 export default function FacultyCoordinators() {
   return (
     <section
-      id="partners"
+      id="coordinators"
       className="scroll-mt-32 flex items-center py-10 relative overflow-hidden"
     >
       {/* Sophisticated background */}
