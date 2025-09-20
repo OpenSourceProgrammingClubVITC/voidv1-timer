@@ -12,7 +12,6 @@ const nav = [
   { href: "#prizes", label: "Prizes" },
   { href: "#judges", label: "Judges" },
   { href: "#organisers", label: "Organisers" },
-  { href: "#coordinators", label: "Coordinators" },
   { href: "#partners", label: "Partners" },
   { href: "#sponsors", label: "Sponsors" },
   { href: "#faq", label: "FAQ" },
@@ -174,7 +173,7 @@ export default function Navbar() {
         return "from-amber-500 via-yellow-400 to-orange-500";
       case "#judges":
         return "from-purple-500 via-violet-400 to-indigo-500";
-      case "#organizers":
+      case "#organisers":
         return "from-emerald-500 via-green-400 to-teal-500";
       case "#partners":
         return "from-rose-500 via-pink-400 to-purple-500";

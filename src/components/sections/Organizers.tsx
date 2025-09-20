@@ -82,7 +82,7 @@ const ORGANIZERS: Organizers = {
   organizers: [
     {
       name: "Pranav",
-      profileSrc: "/ospc.png",
+      profileSrc: "/oc/pranav.jpg",
       bio: "Lorem ipsum dolor sit amet consectetur adipiscing elit.",
     },
     {
@@ -92,7 +92,7 @@ const ORGANIZERS: Organizers = {
     },
     {
       name: "Mithil",
-      profileSrc: "/ospc.png",
+      profileSrc: "/oc/mithil.jpg",
       bio: "Lorem ipsum dolor sit amet consectetur adipiscing elit.",
     },
     {
@@ -114,7 +114,7 @@ const ORGANIZERS: Organizers = {
     },
     {
       name: "Derrick",
-      profileSrc: "/ospc.png",
+      profileSrc: "/oc/derrick.jpeg",
       bio: "Lorem ipsum dolor sit amet consectetur adipiscing elit.",
     },
   ],
@@ -122,7 +122,7 @@ const ORGANIZERS: Organizers = {
   poc: [
     {
       name: "Vaibhav",
-      profileSrc: "/ospc.png",
+      profileSrc: "/oc/vaibhav.jpg",
       bio: "Lorem ipsum dolor sit amet consectetur adipiscing elit.",
       role: "Social Media",
     },
@@ -133,7 +133,7 @@ const ORGANIZERS: Organizers = {
       role: "Photography",
     },
     {
-      name: "Rohit",
+      name: "Rohith",
       profileSrc: "/ospc.png",
       bio: "Lorem ipsum dolor sit amet consectetur adipiscing elit.",
       role: "Website",
@@ -156,28 +156,22 @@ const ORGANIZERS: Organizers = {
       bio: "Lorem ipsum dolor sit amet consectetur adipiscing elit.",
       role: "Registration",
     },
-    {
-      name: "Food Team",
-      profileSrc: "/ospc.png",
-      bio: "Lorem ipsum dolor sit amet consectetur adipiscing elit.",
-      role: "Food",
-    },
   ],
 
   coreTechTeam: [
     {
       name: "Naveen",
-      profileSrc: "/ospc.png",
+      profileSrc: "/oc/naveen.jpg",
       bio: "Lorem ipsum dolor sit amet consectetur adipiscing elit.",
     },
     {
       name: "Priyanka",
-      profileSrc: "/ospc.png",
+      profileSrc: "/oc/priyanka.jpg",
       bio: "Lorem ipsum dolor sit amet consectetur adipiscing elit.",
     },
     {
       name: "Keerthivasan",
-      profileSrc: "/ospc.png",
+      profileSrc: "/oc/kv.webp",
       bio: "Lorem ipsum dolor sit amet consectetur adipiscing elit.",
     },
     {
@@ -187,7 +181,7 @@ const ORGANIZERS: Organizers = {
     },
     {
       name: "Sanjaykumar",
-      profileSrc: "/ospc.png",
+      profileSrc: "/oc/Sanjay_1.jpg",
       bio: "Lorem ipsum dolor sit amet consectetur adipiscing elit.",
     },
     {
@@ -197,6 +191,13 @@ const ORGANIZERS: Organizers = {
     },
   ],
 };
+
+const FACULTY_COORDINATORS = [
+  { name: "Dr. Nisha R", profileSrc: "/ospc.png" },
+  { name: "Dr. Jayaram B", profileSrc: "/ospc.png" },
+  { name: "Dr. Umitty Srinivasa Rao", profileSrc: "/ospc.png" },
+  { name: "Dr. Maheswari S", profileSrc: "/ospc.png" },
+];
 
 export default function Organizers() {
   return (
@@ -288,107 +289,94 @@ export default function Organizers() {
             </LiquidGlassCard>
           ))}
         </div>
-        <SectionSubtitle>Organizers</SectionSubtitle>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-5xl mx-auto mb-20">
-          {ORGANIZERS.organizers.map((info) => (
-            <LiquidGlassCard key={info.name}>
-              <div className="flex flex-col md:flex-row items-center gap-6 p-6">
-                <div className="size-28 rounded-xl overflow-hidden relative flex-shrink-0">
-                  <Image
-                    src={info.profileSrc}
-                    alt={`${info.name} photo`}
-                    fill
-                    sizes="256px"
-                    className="object-contain p-2"
-                    priority
-                  />
-                </div>
-                <div className="text-white/90 w-full">
-                  <h3 className="text-2xl font-bold mb-2">{info.name}</h3>
-                  <p className="text-gray-300 leading-relaxed text-base">
-                    {info.bio}
-                  </p>
-                </div>
+        <SectionSubtitle>Faculty Coordinators</SectionSubtitle>
+        <div className="flex flex-wrap justify-center gap-8 max-w-5xl mx-auto mb-20">
+          {FACULTY_COORDINATORS.map((fc) => (
+            <div key={fc.name} className="flex flex-col items-center text-center gap-3">
+              <div className="relative w-28 h-28 md:w-32 md:h-32">
+                <Image
+                  src={fc.profileSrc}
+                  alt={`${fc.name} photo`}
+                  fill
+                  sizes="128px"
+                  className="object-cover rounded-full"
+                  priority={false}
+                />
               </div>
-            </LiquidGlassCard>
+              <h3 className="text-lg md:text-xl font-semibold">{fc.name}</h3>
+            </div>
+          ))}
+        </div>
+        <SectionSubtitle>Organizers</SectionSubtitle>
+        <div className="flex flex-wrap justify-center gap-8 max-w-5xl mx-auto mb-20">
+          {ORGANIZERS.organizers.map((info) => (
+            <div key={info.name} className="flex flex-col items-center text-center gap-3">
+              <div className="relative w-28 h-28 md:w-32 md:h-32">
+                <Image
+                  src={info.profileSrc}
+                  alt={`${info.name} photo`}
+                  fill
+                  sizes="128px"
+                  className="object-cover rounded-full"
+                  priority={false}
+                />
+              </div>
+              <h3 className="text-lg md:text-xl font-semibold">{info.name}</h3>
+            </div>
           ))}
         </div>
         <SectionSubtitle>Co Organizers</SectionSubtitle>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-5xl mx-auto mb-20">
+        <div className="flex flex-wrap justify-center gap-8 max-w-5xl mx-auto mb-20">
           {ORGANIZERS.coOrganizers.map((info) => (
-            <LiquidGlassCard key={info.name}>
-              <div className="flex flex-col md:flex-row items-center gap-6 p-6">
-                <div className="size-28 rounded-xl overflow-hidden relative flex-shrink-0">
-                  <Image
-                    src={info.profileSrc}
-                    alt={`${info.name} photo`}
-                    fill
-                    sizes="256px"
-                    className="object-contain p-2"
-                    priority
-                  />
-                </div>
-                <div className="text-white/90 w-full">
-                  <h3 className="text-2xl font-bold mb-2">{info.name}</h3>
-                  <p className="text-gray-300 leading-relaxed text-base">
-                    {info.bio}
-                  </p>
-                </div>
+            <div key={info.name} className="flex flex-col items-center text-center gap-3">
+              <div className="relative w-28 h-28 md:w-32 md:h-32">
+                <Image
+                  src={info.profileSrc}
+                  alt={`${info.name} photo`}
+                  fill
+                  sizes="128px"
+                  className="object-cover rounded-full"
+                  priority={false}
+                />
               </div>
-            </LiquidGlassCard>
+              <h3 className="text-lg md:text-xl font-semibold">{info.name}</h3>
+            </div>
           ))}
         </div>
         <SectionSubtitle>POC</SectionSubtitle>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-5xl mx-auto mb-20">
+        <div className="flex flex-wrap justify-center gap-8 max-w-5xl mx-auto mb-20">
           {ORGANIZERS.poc.map((info) => (
-            <LiquidGlassCard key={info.name}>
-              <div className="flex flex-col md:flex-row items-center gap-6 p-6">
-                <div className="size-28 rounded-xl overflow-hidden relative flex-shrink-0">
-                  <Image
-                    src={info.profileSrc}
-                    alt={`${info.name} photo`}
-                    fill
-                    sizes="256px"
-                    className="object-contain p-2"
-                    priority
-                  />
-                </div>
-                <div className="text-white/90 w-full">
-                  <h3 className="text-2xl font-bold mb-2">{info.name}</h3>
-                  <p className="text-white/85 font-medium text-lg mb-1">
-                    {info.role}
-                  </p>
-                  <p className="text-gray-300 leading-relaxed text-base">
-                    {info.bio}
-                  </p>
-                </div>
+            <div key={info.name} className="flex flex-col items-center text-center gap-3">
+              <div className="relative w-28 h-28 md:w-32 md:h-32">
+                <Image
+                  src={info.profileSrc}
+                  alt={`${info.name} photo`}
+                  fill
+                  sizes="128px"
+                  className="object-cover rounded-full"
+                  priority={false}
+                />
               </div>
-            </LiquidGlassCard>
+              <h3 className="text-lg md:text-xl font-semibold">{info.name}</h3>
+            </div>
           ))}
         </div>
         <SectionSubtitle>Core Tech Team</SectionSubtitle>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-5xl mx-auto mb-20">
+        <div className="flex flex-wrap justify-center gap-8 max-w-5xl mx-auto mb-20">
           {ORGANIZERS.coreTechTeam.map((info) => (
-            <LiquidGlassCard key={info.name}>
-              <div className="flex flex-col md:flex-row items-center gap-6 p-6">
-                <div className="size-28 rounded-xl overflow-hidden relative flex-shrink-0">
-                  <Image
-                    src={info.profileSrc}
-                    alt={`${info.name} photo`}
-                    fill
-                    sizes="256px"
-                    className="object-contain p-2"
-                    priority
-                  />
-                </div>
-                <div className="text-white/90 w-full">
-                  <h3 className="text-2xl font-bold mb-2">{info.name}</h3>
-                  <p className="text-gray-300 leading-relaxed text-base">
-                    {info.bio}
-                  </p>
-                </div>
+            <div key={info.name} className="flex flex-col items-center text-center gap-3">
+              <div className="relative w-28 h-28 md:w-32 md:h-32">
+                <Image
+                  src={info.profileSrc}
+                  alt={`${info.name} photo`}
+                  fill
+                  sizes="128px"
+                  className="object-cover rounded-full"
+                  priority={false}
+                />
               </div>
-            </LiquidGlassCard>
+              <h3 className="text-lg md:text-xl font-semibold">{info.name}</h3>
+            </div>
           ))}
         </div>
       </div>
