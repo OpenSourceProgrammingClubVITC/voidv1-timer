@@ -1,7 +1,20 @@
+import SectionSubtitle from "../SectionSubtitle";
 import SectionTitle from "../SectionTitle";
 import { SponsorCard } from "../SponsorCard";
 
-const SPONSORS = {
+type Sponsor = {
+  name: string;
+  href: string;
+  logoSrc: string;
+};
+
+type Sponsors = {
+  gold: Sponsor[];
+  silver: Sponsor[];
+  bronze: Sponsor[];
+};
+
+const SPONSORS: Sponsors = {
   gold: [
     {
       name: "Devfolio",
@@ -58,9 +71,9 @@ export default function Sponsors() {
 
         return (
           <div className="text-center mb-12" key={level}>
-            <h3 className={`text-2xl font-bold mb-6 ${levelBasedClassNames}`}>
+            <SectionSubtitle className={levelBasedClassNames}>
               {level} Sponsor
-            </h3>
+            </SectionSubtitle>
             <div className="flex justify-center flex-row flex-wrap gap-8">
               {SPONSORS[level].map(({ name, href, logoSrc }) => {
                 return (

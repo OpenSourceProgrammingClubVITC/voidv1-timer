@@ -6,8 +6,7 @@ import Organizers from "@/components/sections/Organizers";
 import Partners from "@/components/sections/Partners";
 import Sponsors from "@/components/sections/Sponsors";
 import FAQ from "@/components/sections/FAQ";
-import StudentCoordinators from "./sections/StudentCoordinators";
-import FacultyCoordinators from "./sections/FacultyCoordinators";
+import Coordinators from "./sections/Coordinators";
 
 export default function Sections() {
   return (
@@ -17,8 +16,7 @@ export default function Sections() {
       <Prizes />
       <Judges />
       <Organizers />
-      <FacultyCoordinators />
-      <StudentCoordinators />
+      <Coordinators />
       <Partners />
       <Sponsors />
       <FAQ />
