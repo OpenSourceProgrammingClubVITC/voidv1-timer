@@ -31,10 +31,7 @@ const STUDENT_COORDINATORS_INFO = [
 
 export default function StudentCoordinators() {
   return (
-    <section
-      id="partners"
-      className="scroll-mt-32 flex items-center py-10 relative overflow-hidden"
-    >
+    <section className="scroll-mt-32 flex items-center py-10 relative overflow-hidden">
       {/* Sophisticated background */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/5 left-1/6 w-80 h-80 bg-gradient-to-br from-blue-500/15 to-cyan-500/15 rounded-full blur-3xl opacity-50 animate-pulse"></div>

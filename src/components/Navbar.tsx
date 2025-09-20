@@ -12,6 +12,7 @@ const nav = [
   { href: "#prizes", label: "Prizes" },
   { href: "#judges", label: "Judges" },
   { href: "#organisers", label: "Organisers" },
+  { href: "#coordinators", label: "Coordinators" },
   { href: "#partners", label: "Partners" },
   { href: "#sponsors", label: "Sponsors" },
   { href: "#faq", label: "FAQ" },
@@ -27,15 +28,15 @@ export default function Navbar() {
   const linkRefs = useRef<Record<string, HTMLAnchorElement>>({});
 
   React.useEffect(() => {
-    const script = document.createElement('script');
-    script.src = 'https://apply.devfolio.co/v2/sdk.js';
+    const script = document.createElement("script");
+    script.src = "https://apply.devfolio.co/v2/sdk.js";
     script.async = true;
     script.defer = true;
     document.body.appendChild(script);
     return () => {
       document.body.removeChild(script);
-    }
-}, []);
+    };
+  }, []);
 
   // Keep track of scroll position
   useEffect(() => {
@@ -50,13 +51,13 @@ export default function Navbar() {
     const sectionEls = nav
       .map((i) => document.querySelector<HTMLElement>(i.href))
       .filter(Boolean) as HTMLElement[];
-    
+
     if (!sectionEls.length) {
       // If sections don't exist yet, set a default active state
       setActive("#about");
       return;
     }
-    
+
     const observer = new IntersectionObserver(
       (entries) => {
         // Find the section that's most visible
@@ -78,13 +79,13 @@ export default function Navbar() {
           }
         }
       },
-      { 
+      {
         // Adjusted margins for better detection
-        rootMargin: "-20% 0px -60% 0px", 
-        threshold: [0, 0.1, 0.25, 0.5, 0.75, 1] 
-      }
+        rootMargin: "-20% 0px -60% 0px",
+        threshold: [0, 0.1, 0.25, 0.5, 0.75, 1],
+      },
     );
-    
+
     sectionEls.forEach((el) => observer.observe(el));
     return () => observer.disconnect();
   }, []);
@@ -95,18 +96,19 @@ export default function Navbar() {
     if (element) {
       // Calculate offset to account for fixed navbar height
       const navbarHeight = 60; // Reduced gap for better positioning
-      const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+      const elementPosition =
+        element.getBoundingClientRect().top + window.pageYOffset;
       const offsetPosition = elementPosition - navbarHeight;
-      
+
       window.scrollTo({
         top: offsetPosition,
-        behavior: "smooth"
+        behavior: "smooth",
       });
-      
+
       setActive(href);
     } // else {
     //   // Debug: Log when element is not found
-    //   console.warn(`Element with selector "${href}" not found. Available sections:`, 
+    //   console.warn(`Element with selector "${href}" not found. Available sections:`,
     //     Array.from(document.querySelectorAll('[id]')).map(el => `#${el.id}`));
     // }
   };
@@ -115,25 +117,27 @@ export default function Navbar() {
   const updateIndicator = (targetId: string) => {
     const indicator = indicatorRef.current;
     const targetLink = linkRefs.current[targetId];
-    const navContainer = navRef.current?.querySelector('.relative.flex.items-center');
-    
+    const navContainer = navRef.current?.querySelector(
+      ".relative.flex.items-center",
+    );
+
     if (!indicator || !targetLink || !navContainer) return;
-    
+
     try {
       const linkRect = targetLink.getBoundingClientRect();
       const navRect = navContainer.getBoundingClientRect();
-      
+
       // Calculate position relative to the nav links container
       const left = linkRect.left - navRect.left;
       const width = linkRect.width;
-      
+
       // Apply smooth animation
       indicator.style.transition = "all 0.4s cubic-bezier(0.16, 1, 0.3, 1)";
       indicator.style.left = `${left}px`;
       indicator.style.width = `${width}px`;
     } catch (error) {
       // Silently handle any positioning errors
-      console.warn('Error updating indicator position:', error);
+      console.warn("Error updating indicator position:", error);
     }
   };
 
@@ -154,23 +158,32 @@ export default function Navbar() {
       }
     };
 
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, [hovered, active]);
 
   // Get gradient color based on active section
   const getActiveGradient = () => {
     const current = hovered || active;
-    switch(current) {
-      case "#about": return "from-purple-500 via-pink-500 to-emerald-500";
-      case "#tracks": return "from-blue-500 via-cyan-400 to-teal-500";
-      case "#prizes": return "from-amber-500 via-yellow-400 to-orange-500";
-      case "#judges": return "from-purple-500 via-violet-400 to-indigo-500";
-      case "#organizers": return "from-emerald-500 via-green-400 to-teal-500";
-      case "#partners": return "from-rose-500 via-pink-400 to-purple-500";
-      case "#sponsors": return "from-amber-500 via-orange-400 to-red-500";
-      case "#faq": return "from-blue-500 via-indigo-400 to-violet-500";
-      default: return "from-purple-500 via-pink-500 to-emerald-500";
+    switch (current) {
+      case "#about":
+        return "from-purple-500 via-pink-500 to-emerald-500";
+      case "#tracks":
+        return "from-blue-500 via-cyan-400 to-teal-500";
+      case "#prizes":
+        return "from-amber-500 via-yellow-400 to-orange-500";
+      case "#judges":
+        return "from-purple-500 via-violet-400 to-indigo-500";
+      case "#organizers":
+        return "from-emerald-500 via-green-400 to-teal-500";
+      case "#partners":
+        return "from-rose-500 via-pink-400 to-purple-500";
+      case "#sponsors":
+        return "from-amber-500 via-orange-400 to-red-500";
+      case "#faq":
+        return "from-blue-500 via-indigo-400 to-violet-500";
+      default:
+        return "from-purple-500 via-pink-500 to-emerald-500";
     }
   };
 
@@ -178,16 +191,17 @@ export default function Navbar() {
     <>
       {/* Desktop liquid glass navbar */}
       <div className="hidden md:block">
-        <div 
+        <div
           ref={navRef}
           className={`fixed z-50 top-5 left-1/2 -translate-x-1/2 rounded-full transition-all duration-300
-                     ${scrolled ? 'px-6 py-2' : 'px-8 py-3'}`}
+                     ${scrolled ? "px-6 py-2" : "px-8 py-3"}`}
           style={{
             background: "rgba(15, 15, 20, 0.65)",
             backdropFilter: "blur(12px)",
             WebkitBackdropFilter: "blur(12px)",
-            boxShadow: "0 10px 30px rgba(0, 0, 0, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.1)",
-            border: "1px solid rgba(255, 255, 255, 0.08)"
+            boxShadow:
+              "0 10px 30px rgba(0, 0, 0, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.1)",
+            border: "1px solid rgba(255, 255, 255, 0.08)",
           }}
         >
           <div className="flex items-center gap-1">
@@ -196,24 +210,25 @@ export default function Navbar() {
                 <img src="/logo.png" alt="Logo" className="h-7 w-auto" />
               </a>
             </div>
-            
+
             <div className="relative flex items-center">
               {/* Dynamic background indicator */}
-              <div 
+              <div
                 ref={indicatorRef}
                 className="absolute h-full top-0 -z-10 rounded-full transition-all duration-400"
                 style={{
                   background: "rgba(255, 255, 255, 0.08)",
-                  boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.05)",
-                  border: "1px solid rgba(255, 255, 255, 0.08)"
+                  boxShadow:
+                    "0 4px 12px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.05)",
+                  border: "1px solid rgba(255, 255, 255, 0.08)",
                 }}
               />
-              
+
               {nav.map((item) => {
                 const isActive = active === item.href;
                 const isHovered = hovered === item.href;
                 const isHighlighted = isActive || isHovered;
-                
+
                 return (
                   <a
                     key={item.href}
@@ -223,7 +238,9 @@ export default function Navbar() {
                     href={item.href}
                     className="relative px-4 py-2 text-sm transition-colors duration-300 cursor-pointer"
                     style={{
-                      color: isHighlighted ? "#ffffff" : "rgba(255, 255, 255, 0.7)"
+                      color: isHighlighted
+                        ? "#ffffff"
+                        : "rgba(255, 255, 255, 0.7)",
                     }}
                     onClick={(e) => {
                       e.preventDefault();
@@ -233,14 +250,14 @@ export default function Navbar() {
                     onMouseLeave={() => setHovered(null)}
                   >
                     {item.label}
-                    
+
                     {/* Gradient underline - only shows for highlighted items */}
                     {isHighlighted && (
                       <motion.div
                         className={`absolute bottom-0 h-0.5 rounded-full bg-gradient-to-r ${getActiveGradient()}`}
-                        style={{ 
-                          width: "50%", 
-                          left: "25%"
+                        style={{
+                          width: "50%",
+                          left: "25%",
                         }}
                         initial={{ scaleX: 0 }}
                         animate={{ scaleX: 1 }}
@@ -253,14 +270,13 @@ export default function Navbar() {
                 );
               })}
             </div>
-            
+
             <div className="ml-6">
               <div
                 className="apply-button h-9 w-48 rounded-full"
                 data-hackathon-slug="voidv1"
                 data-button-theme="light"
-              >
-              </div>
+              ></div>
             </div>
           </div>
         </div>
@@ -280,9 +296,9 @@ export default function Navbar() {
             {open ? <X size={22} /> : <Menu size={22} />}
           </button>
         </div>
-        
+
         {open && (
-          <motion.nav 
+          <motion.nav
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
@@ -292,7 +308,7 @@ export default function Navbar() {
             <div className="flex flex-col px-4">
               {nav.map((item) => {
                 const isActive = active === item.href;
-                
+
                 return (
                   <a
                     key={item.href}
@@ -309,7 +325,7 @@ export default function Navbar() {
                   >
                     {item.label}
                     {isActive && (
-                      <motion.div 
+                      <motion.div
                         className={`absolute bottom-1 left-0 w-12 h-0.5 bg-gradient-to-r ${getActiveGradient()} rounded-full`}
                         layoutId="mobileActiveIndicator"
                       />
@@ -317,14 +333,13 @@ export default function Navbar() {
                   </a>
                 );
               })}
-              
+
               <div className="py-4">
-              <div
-                className="apply-button h-9 w-48 rounded-full"
-                data-hackathon-slug="voidv1"
-                data-button-theme="light"
-              >
-              </div>
+                <div
+                  className="apply-button h-9 w-48 rounded-full"
+                  data-hackathon-slug="voidv1"
+                  data-button-theme="light"
+                ></div>
               </div>
             </div>
           </motion.nav>
@@ -333,3 +348,4 @@ export default function Navbar() {
     </>
   );
 }
+
