@@ -225,7 +225,6 @@ export default function Organizers() {
       </div>
       <div className="max-w-6xl mx-auto">
         <SectionTitle>VOID Organizers</SectionTitle>
-        <SectionSubtitle>Club / Chapters</SectionSubtitle>
         <p className="text-center text-lg text-gray-300 max-w-3xl mx-auto mb-8">
           VOID is powered by OSPC x BIC, bringing together the best minds to
           create an electrifying innovation battlefield in the digital realm.
