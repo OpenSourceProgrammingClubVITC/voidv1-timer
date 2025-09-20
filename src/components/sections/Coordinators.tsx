@@ -9,21 +9,25 @@ const COORDINATORS_NAMES = {
     {
       name: "Dr.Nisha R",
       photoUrl: "/ospc.png",
+      field: "CS lorem ipsum",
       bio: "Lorem ipsum dolor sit amet consectetur adipiscing elit.",
     },
     {
       name: "Dr.Jayaram B",
       photoUrl: "/ospc.png",
+      field: "CS lorem ipsum",
       bio: "Lorem ipsum dolor sit amet consectetur adipiscing elit.",
     },
     {
       name: "Dr.Umitty Srinivasa Rao",
       photoUrl: "/ospc.png",
+      field: "CS lorem ipsum",
       bio: "Lorem ipsum dolor sit amet consectetur adipiscing elit.",
     },
     {
       name: "Dr.Maheswari S",
       photoUrl: "/ospc.png",
+      field: "CS lorem ipsum",
       bio: "Lorem ipsum dolor sit amet consectetur adipiscing elit.",
     },
   ],
@@ -108,7 +112,7 @@ export default function Coordinators() {
                 <div className="text-white/90 w-full">
                   <h3 className="text-2xl font-bold mb-2">{info.name}</h3>
                   <p className="text-white/85 font-medium text-lg mb-1">
-                    Faculty Coordinator
+                    {info.field}
                   </p>
                   <p className="text-gray-300 leading-relaxed text-base">
                     {info.bio}

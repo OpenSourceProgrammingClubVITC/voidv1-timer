@@ -251,9 +251,6 @@ export default function Organizers() {
                     <h3 className="text-3xl font-bold text-white tracking-wide font-heading">
                       {organizer.name}
                     </h3>
-                    <p className="text-white/85 font-medium text-lg">
-                      Club / Chapters
-                    </p>
                     <p className="text-gray-300 leading-relaxed text-base">
                       {organizer.bio}
                     </p>
