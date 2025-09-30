@@ -52,9 +52,9 @@ export default function HeroSection() {
 
         {/* Venue / Date / Countdown pill */}
         <EventInfoContainer 
-          isoTarget="2025-09-29T10:00:00Z"
+          isoTarget="2025-10-28T10:00:00Z"
           venue="Venue: MG Auditorium"
-          date="Date: 2025-09-29"
+          date="Date: 2025-10-28"
         />
       </motion.div>
     </motion.div>
