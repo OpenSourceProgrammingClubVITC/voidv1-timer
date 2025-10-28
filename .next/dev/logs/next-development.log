@@ -1,0 +1,662 @@
+[00:00:03.103] Server  LOG      ✓ Ready in 2.3s
+[00:04:58.390] Server  LOG      ○ Compiling / ...
+[00:05:03.637] Server  ERROR    ⨯ ./app/page.tsx:4:1
+Module not found: Can't resolve 'framer-motion'
+  2 |
+  3 | import { useRef } from "react";
+> 4 | import { motion, useScroll, useTransform } from "framer-motion";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import Image from "next/image";
+  6 | import HeroShader from "@/components/HeroShader";
+  7 |
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+
+./components/HeroShader.tsx:4:1
+Module not found: Can't resolve 'three'
+  2 |
+  3 | import { useEffect, useRef } from "react";
+> 4 | import * as THREE from "three";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { UniformsUtils } from "three";
+  6 | import { EffectComposer } from "three/examples/jsm/postprocessing/EffectComposer.js";
+  7 | import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass.js";
+
+
+
+Import traces:
+  Client Component Browser:
+    ./components/HeroShader.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/HeroShader.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+
+./components/HeroShader.tsx:5:1
+Module not found: Can't resolve 'three'
+  3 | import { useEffect, useRef } from "react";
+  4 | import * as THREE from "three";
+> 5 | import { UniformsUtils } from "three";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import { EffectComposer } from "three/examples/jsm/postprocessing/EffectComposer.js";
+  7 | import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass.js";
+  8 | import { ShaderPass } from "three/examples/jsm/postprocessing/ShaderPass.js";
+
+
+
+Import traces:
+  Client Component Browser:
+    ./components/HeroShader.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/HeroShader.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+
+./components/HeroShader.tsx:6:1
+Module not found: Can't resolve 'three/examples/jsm/postprocessing/EffectComposer.js'
+  4 | import * as THREE from "three";
+  5 | import { UniformsUtils } from "three";
+> 6 | import { EffectComposer } from "three/examples/jsm/postprocessing/EffectComposer.js";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass.js";
+  8 | import { ShaderPass } from "three/examples/jsm/postprocessing/ShaderPass.js";
+  9 | import { UnrealBloomPass } from "three/examples/jsm/postprocessing/UnrealBloomPass.js";
+
+
+
+Import traces:
+  Client Component Browser:
+    ./components/HeroShader.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/HeroShader.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+
+./components/HeroShader.tsx:7:1
+Module not found: Can't resolve 'three/examples/jsm/postprocessing/RenderPass.js'
+   5 | import { UniformsUtils } from "three";
+   6 | import { EffectComposer } from "three/examples/jsm/postprocessing/EffectComposer.js";
+>  7 | import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass.js";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import { ShaderPass } from "three/examples/jsm/postprocessing/ShaderPass.js";
+   9 | import { UnrealBloomPass } from "three/examples/jsm/postprocessing/UnrealBloomPass.js";
+  10 |
+
+
+
+Import traces:
+  Client Component Browser:
+    ./components/HeroShader.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/HeroShader.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+
+./components/HeroShader.tsx:8:1
+Module not found: Can't resolve 'three/examples/jsm/postprocessing/ShaderPass.js'
+   6 | import { EffectComposer } from "three/examples/jsm/postprocessing/EffectComposer.js";
+   7 | import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass.js";
+>  8 | import { ShaderPass } from "three/examples/jsm/postprocessing/ShaderPass.js";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import { UnrealBloomPass } from "three/examples/jsm/postprocessing/UnrealBloomPass.js";
+  10 |
+  11 | // Create noise textures
+
+
+
+Import traces:
+  Client Component Browser:
+    ./components/HeroShader.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/HeroShader.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+
+./components/HeroShader.tsx:9:1
+Module not found: Can't resolve 'three/examples/jsm/postprocessing/UnrealBloomPass.js'
+   7 | import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass.js";
+   8 | import { ShaderPass } from "three/examples/jsm/postprocessing/ShaderPass.js";
+>  9 | import { UnrealBloomPass } from "three/examples/jsm/postprocessing/UnrealBloomPass.js";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  10 |
+  11 | // Create noise textures
+  12 | function createNoiseTexture(size = 512) {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./components/HeroShader.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/HeroShader.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:05:06.692] Server  LOG      ○ Compiling /_error ...
+[00:05:11.834] Server  ERROR    ⨯ ./app/page.tsx:4:1
+Module not found: Can't resolve 'framer-motion'
+  2 |
+  3 | import { useRef } from "react";
+> 4 | import { motion, useScroll, useTransform } from "framer-motion";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import Image from "next/image";
+  6 | import HeroShader from "@/components/HeroShader";
+  7 |
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+
+./components/HeroShader.tsx:4:1
+Module not found: Can't resolve 'three'
+  2 |
+  3 | import { useEffect, useRef } from "react";
+> 4 | import * as THREE from "three";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { UniformsUtils } from "three";
+  6 | import { EffectComposer } from "three/examples/jsm/postprocessing/EffectComposer.js";
+  7 | import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass.js";
+
+
+
+Import traces:
+  Client Component Browser:
+    ./components/HeroShader.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/HeroShader.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+
+./components/HeroShader.tsx:5:1
+Module not found: Can't resolve 'three'
+  3 | import { useEffect, useRef } from "react";
+  4 | import * as THREE from "three";
+> 5 | import { UniformsUtils } from "three";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import { EffectComposer } from "three/examples/jsm/postprocessing/EffectComposer.js";
+  7 | import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass.js";
+  8 | import { ShaderPass } from "three/examples/jsm/postprocessing/ShaderPass.js";
+
+
+
+Import traces:
+  Client Component Browser:
+    ./components/HeroShader.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/HeroShader.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+
+./components/HeroShader.tsx:6:1
+Module not found: Can't resolve 'three/examples/jsm/postprocessing/EffectComposer.js'
+  4 | import * as THREE from "three";
+  5 | import { UniformsUtils } from "three";
+> 6 | import { EffectComposer } from "three/examples/jsm/postprocessing/EffectComposer.js";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass.js";
+  8 | import { ShaderPass } from "three/examples/jsm/postprocessing/ShaderPass.js";
+  9 | import { UnrealBloomPass } from "three/examples/jsm/postprocessing/UnrealBloomPass.js";
+
+
+
+Import traces:
+  Client Component Browser:
+    ./components/HeroShader.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/HeroShader.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+
+./components/HeroShader.tsx:7:1
+Module not found: Can't resolve 'three/examples/jsm/postprocessing/RenderPass.js'
+   5 | import { UniformsUtils } from "three";
+   6 | import { EffectComposer } from "three/examples/jsm/postprocessing/EffectComposer.js";
+>  7 | import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass.js";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import { ShaderPass } from "three/examples/jsm/postprocessing/ShaderPass.js";
+   9 | import { UnrealBloomPass } from "three/examples/jsm/postprocessing/UnrealBloomPass.js";
+  10 |
+
+
+
+Import traces:
+  Client Component Browser:
+    ./components/HeroShader.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/HeroShader.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+
+./components/HeroShader.tsx:8:1
+Module not found: Can't resolve 'three/examples/jsm/postprocessing/ShaderPass.js'
+   6 | import { EffectComposer } from "three/examples/jsm/postprocessing/EffectComposer.js";
+   7 | import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass.js";
+>  8 | import { ShaderPass } from "three/examples/jsm/postprocessing/ShaderPass.js";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import { UnrealBloomPass } from "three/examples/jsm/postprocessing/UnrealBloomPass.js";
+  10 |
+  11 | // Create noise textures
+
+
+
+Import traces:
+  Client Component Browser:
+    ./components/HeroShader.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/HeroShader.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+
+./components/HeroShader.tsx:9:1
+Module not found: Can't resolve 'three/examples/jsm/postprocessing/UnrealBloomPass.js'
+   7 | import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass.js";
+   8 | import { ShaderPass } from "three/examples/jsm/postprocessing/ShaderPass.js";
+>  9 | import { UnrealBloomPass } from "three/examples/jsm/postprocessing/UnrealBloomPass.js";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  10 |
+  11 | // Create noise textures
+  12 | function createNoiseTexture(size = 512) {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./components/HeroShader.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/HeroShader.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:05:17.828] Browser ERROR   uncaughtError: Error: ./app/page.tsx:4:1
+Module not found: Can't resolve 'framer-motion'
+  2 |
+  3 | import { useRef } from "react";
+> 4 | import { motion, useScroll, useTransform } from "framer-motion";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import Image from "next/image";
+  6 | import HeroShader from "@/components/HeroShader";
+  7 |
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:05:18.489] Browser DEBUG   TSS: Counted history being replaced
+[00:05:18.489] Browser DEBUG   TSS: Caught history
+[00:05:18.489] Browser DEBUG   TSS: Checking if repeated 500 times for interval 1000 against data:  {}
+[00:05:18.490] Browser ERROR   ./app/page.tsx:4:1
+Module not found: Can't resolve 'framer-motion'
+  2 |
+  3 | import { useRef } from "react";
+> 4 | import { motion, useScroll, useTransform } from "framer-motion";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import Image from "next/image";
+  6 | import HeroShader from "@/components/HeroShader";
+  7 |
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:05:18.490] Browser ERROR   ./components/HeroShader.tsx:5:1
+Module not found: Can't resolve 'three'
+  3 | import { useEffect, useRef } from "react";
+  4 | import * as THREE from "three";
+> 5 | import { UniformsUtils } from "three";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import { EffectComposer } from "three/examples/jsm/postprocessing/EffectComposer.js";
+  7 | import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass.js";
+  8 | import { ShaderPass } from "three/examples/jsm/postprocessing/ShaderPass.js";
+
+Import traces:
+  Client Component Browser:
+    ./components/HeroShader.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/HeroShader.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:05:18.490] Browser ERROR   ./components/HeroShader.tsx:6:1
+Module not found: Can't resolve 'three/examples/jsm/postprocessing/EffectComposer.js'
+  4 | import * as THREE from "three";
+  5 | import { UniformsUtils } from "three";
+> 6 | import { EffectComposer } from "three/examples/jsm/postprocessing/EffectComposer.js";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass.js";
+  8 | import { ShaderPass } from "three/examples/jsm/postprocessing/ShaderPass.js";
+  9 | import { UnrealBloomPass } from "three/examples/jsm/postprocessing/UnrealBloomPass.js";
+
+Import traces:
+  Client Component Browser:
+    ./components/HeroShader.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/HeroShader.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:05:18.490] Browser ERROR   ./components/HeroShader.tsx:7:1
+Module not found: Can't resolve 'three/examples/jsm/postprocessing/RenderPass.js'
+   5 | import { UniformsUtils } from "three";
+   6 | import { EffectComposer } from "three/examples/jsm/postprocessing/EffectComposer.js";
+>  7 | import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass.js";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import { ShaderPass } from "three/examples/jsm/postprocessing/ShaderPass.js";
+   9 | import { UnrealBloomPass } from "three/examples/jsm/postprocessing/UnrealBloomPass.js";
+  10 |
+
+Import traces:
+  Client Component Browser:
+    ./components/HeroShader.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/HeroShader.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:05:18.490] Browser ERROR   ./components/HeroShader.tsx:8:1
+Module not found: Can't resolve 'three/examples/jsm/postprocessing/ShaderPass.js'
+   6 | import { EffectComposer } from "three/examples/jsm/postprocessing/EffectComposer.js";
+   7 | import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass.js";
+>  8 | import { ShaderPass } from "three/examples/jsm/postprocessing/ShaderPass.js";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import { UnrealBloomPass } from "three/examples/jsm/postprocessing/UnrealBloomPass.js";
+  10 |
+  11 | // Create noise textures
+
+Import traces:
+  Client Component Browser:
+    ./components/HeroShader.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/HeroShader.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:05:18.490] Browser ERROR   ./components/HeroShader.tsx:9:1
+Module not found: Can't resolve 'three/examples/jsm/postprocessing/UnrealBloomPass.js'
+   7 | import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass.js";
+   8 | import { ShaderPass } from "three/examples/jsm/postprocessing/ShaderPass.js";
+>  9 | import { UnrealBloomPass } from "three/examples/jsm/postprocessing/UnrealBloomPass.js";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  10 |
+  11 | // Create noise textures
+  12 | function createNoiseTexture(size = 512) {
+
+Import traces:
+  Client Component Browser:
+    ./components/HeroShader.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/HeroShader.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:05:19.015] Browser ERROR   ./app/page.tsx:4:1
+Module not found: Can't resolve 'framer-motion'
+  2 |
+  3 | import { useRef } from "react";
+> 4 | import { motion, useScroll, useTransform } from "framer-motion";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import Image from "next/image";
+  6 | import HeroShader from "@/components/HeroShader";
+  7 |
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:05:19.015] Browser ERROR   ./components/HeroShader.tsx:5:1
+Module not found: Can't resolve 'three'
+  3 | import { useEffect, useRef } from "react";
+  4 | import * as THREE from "three";
+> 5 | import { UniformsUtils } from "three";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import { EffectComposer } from "three/examples/jsm/postprocessing/EffectComposer.js";
+  7 | import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass.js";
+  8 | import { ShaderPass } from "three/examples/jsm/postprocessing/ShaderPass.js";
+
+Import traces:
+  Client Component Browser:
+    ./components/HeroShader.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/HeroShader.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:05:19.015] Browser ERROR   ./components/HeroShader.tsx:6:1
+Module not found: Can't resolve 'three/examples/jsm/postprocessing/EffectComposer.js'
+  4 | import * as THREE from "three";
+  5 | import { UniformsUtils } from "three";
+> 6 | import { EffectComposer } from "three/examples/jsm/postprocessing/EffectComposer.js";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass.js";
+  8 | import { ShaderPass } from "three/examples/jsm/postprocessing/ShaderPass.js";
+  9 | import { UnrealBloomPass } from "three/examples/jsm/postprocessing/UnrealBloomPass.js";
+
+Import traces:
+  Client Component Browser:
+    ./components/HeroShader.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/HeroShader.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:05:19.015] Browser ERROR   ./components/HeroShader.tsx:7:1
+Module not found: Can't resolve 'three/examples/jsm/postprocessing/RenderPass.js'
+   5 | import { UniformsUtils } from "three";
+   6 | import { EffectComposer } from "three/examples/jsm/postprocessing/EffectComposer.js";
+>  7 | import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass.js";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import { ShaderPass } from "three/examples/jsm/postprocessing/ShaderPass.js";
+   9 | import { UnrealBloomPass } from "three/examples/jsm/postprocessing/UnrealBloomPass.js";
+  10 |
+
+Import traces:
+  Client Component Browser:
+    ./components/HeroShader.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/HeroShader.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:05:19.015] Browser ERROR   ./components/HeroShader.tsx:8:1
+Module not found: Can't resolve 'three/examples/jsm/postprocessing/ShaderPass.js'
+   6 | import { EffectComposer } from "three/examples/jsm/postprocessing/EffectComposer.js";
+   7 | import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass.js";
+>  8 | import { ShaderPass } from "three/examples/jsm/postprocessing/ShaderPass.js";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import { UnrealBloomPass } from "three/examples/jsm/postprocessing/UnrealBloomPass.js";
+  10 |
+  11 | // Create noise textures
+
+Import traces:
+  Client Component Browser:
+    ./components/HeroShader.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/HeroShader.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:05:19.015] Browser ERROR   ./components/HeroShader.tsx:9:1
+Module not found: Can't resolve 'three/examples/jsm/postprocessing/UnrealBloomPass.js'
+   7 | import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass.js";
+   8 | import { ShaderPass } from "three/examples/jsm/postprocessing/ShaderPass.js";
+>  9 | import { UnrealBloomPass } from "three/examples/jsm/postprocessing/UnrealBloomPass.js";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  10 |
+  11 | // Create noise textures
+  12 | function createNoiseTexture(size = 512) {
+
+Import traces:
+  Client Component Browser:
+    ./components/HeroShader.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/HeroShader.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
